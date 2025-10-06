@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeZport: Level Up Your Game</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style type="text/tailwindcss">
+        @theme {
+        --color-clifford: #da373d;
+      }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a1a1a; /* Dark Grey Base */
+            color: #ffffff;
+        }
+        .logo {
+            height: 50px;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("komunitas.png");
+            background-size: cover;
+            background-position: center;
+        }
+        .accent-bg {
+            background-color: #FF4500; /* Vibrant Orange */
+        }
+        .accent-text {
+            color: #FF4500;
+        }
+        .card-bg {
+            background-color: #2d2d2d;
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                <!-- <h1 class="text-2xl font-bold tracking-wider">GeZport</h1> -->
+                 <img src="1759596149630-removebg-preview.png" class="logo">
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="profile.html" class="hover:text-orange-500 transition-colors">Profile</a>
+                <a href="background.html" class="hover:text-orange-500 transition-colors">Background</a>
+                <a href="purpose.html" class="hover:text-orange-500 transition-colors">Our Purpose</a>
+                <a href="achievement.html" class="hover:text-orange-500 transition-colors">Achievement</a>
+                <a href="careers.html" class="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors">Join Us</a>
+            </nav>
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/90"> 
+            <a href="profile.html" class="block py-2 px-6 text-sm hover:bg-gray-800">Profile</a>
+             <a href="background.html" class="block py-2 px-6 text-sm hover:bg-gray-800">Background</a>
+             <a href="purpose.html" class="block py-2 px-6 text-sm hover:bg-gray-800">Our Purpose</a>
+             <a href="achievement.html" class="block py-2 px-6 text-sm hover:bg-gray-800">Achievement</a>
+             <a href="careers.html" class="block py-2 px-6 text-sm hover:bg-gray-800">Join Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-screen flex items-center justify-center text-center">
+        <div class="max-w-3xl px-4">
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">
+                Level Up <span class="accent-text">Your Game.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-8">
+                Ekosistem olahraga terintegrasi untuk Generasi Z. Kustomisasi produk, event epik, dan komunitas digital dalam satu genggaman.
+            </p>
+            <a href="#pillars" class="bg-orange-600 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-orange-700 transform hover:scale-105 transition-all duration-300">
+                Discover Our World
+            </a>
+        </div>
+    </section>
+
+    <!-- Section 2: Our Three Pillars -->
+    <section id="pillars" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6 text-center">
+            <div class="fade-in-section">
+                <h2 class="text-4xl font-bold mb-4">Tiga Pilar <span class="accent-text">GeZport</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto mb-12">Kami membangun masa depan olahraga dengan menghubungkan tiga elemen inti yang dirancang khusus untukmu.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Pillar 1: Products -->
+                <div class="fade-in-section card-bg p-8 rounded-2xl border border-gray-700 hover:border-orange-500 hover:-translate-y-2 transition-all duration-300">
+                    <div class="accent-bg h-16 w-16 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.14 13.2-5.48 5.48a2 2 0 0 1-2.83-2.83l5.48-5.48L18 4l-5.48 5.48-2.83-2.83a2 2 0 0 1 0-2.83L11.5 2.5a2 2 0 0 1 2.83 0l6.18 6.18a2 2 0 0 1 0 2.83L18.68 13.3a2 2 0 0 1-2.83 0z"></path><path d="m6.37 15.61 2.83-2.83 5.48 5.48a2 2 0 0 1-2.83 2.83z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Produk Olahraga</h3>
+                    <p class="text-gray-400">Apparel dan peralatan hyper-personalized dari material berkelanjutan. Ekspresikan dirimu, dukung planet ini.</p>
+                </div>
+                <!-- Pillar 2: Events -->
+                <div class="fade-in-section card-bg p-8 rounded-2xl border border-gray-700 hover:border-orange-500 hover:-translate-y-2 transition-all duration-300" style="transition-delay: 200ms;">
+                    <div class="accent-bg h-16 w-16 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.4 2.7c.9-1.3 2.3-2.2 3.8-2.5 2.2-.4 4.5.6 5.5 2.4.9 1.7 1.3 3.8.7 5.7l-1.9 5.7c-.2.6-.4 1.1-.7 1.7l-1.1 2.2a1 1 0 0 1-1.6 0l-1.1-2.2c-.3-.6-.5-1.2-.7-1.7l-1.9-5.7c-.5-2 .0-4.1.9-5.7z"></path><path d="M6.3 11.2a3.5 3.5 0 0 0 5.4 0"></path><path d="m2.1 13.8 3.1 3.2a1 1 0 0 0 1.5 0l3.1-3.2"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Event Olahraga</h3>
+                    <p class="text-gray-400">Festival olahraga urban yang menggabungkan kompetisi, musik, dan seni. Ini bukan cuma lari, ini soal experience.</p>
+                </div>
+                <!-- Pillar 3: Platform -->
+                <div class="fade-in-section card-bg p-8 rounded-2xl border border-gray-700 hover:border-orange-500 hover:-translate-y-2 transition-all duration-300" style="transition-delay: 400ms;">
+                    <div class="accent-bg h-16 w-16 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Platform Digital</h3>
+                    <p class="text-gray-400">Aplikasi mobile sebagai pusat komunitas. Temukan teman, ikuti tantangan virtual, dan raih rewards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: The Products -->
+    <section id="products" class="py-20">
+        <div class="container mx-auto px-6 fade-in-section">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-2">Wear Your <span class="accent-text">Story.</span></h2>
+                    <h3 class="text-2xl font-semibold text-gray-300 mb-4">Gear That's Uniquely You.</h3>
+                    <p class="text-gray-400 mb-6">Di GeZport, setiap item dibuat dengan bhan berkualitas tinggi. Beberapa produk terbuat dari material daur ulang berkualitas tinggi, karena gaya dan kepedulian bisa berjalan beriringan.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <a href="produk.html">
+                        <img src="produk.jpeg" alt="Custom Jersey" class="rounded-2xl object-cover w-full h-full transform hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <a href="recycledshoes.html">
+                        <img src="sepaturecycle.jpg" alt="Recycled Shoes" class="rounded-2xl object-cover w-full h-full mt-8 transform hover:scale-105 transition-transform duration-300">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: The Events -->
+    <section id="events" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6 fade-in-section">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <img src="event.png" alt="Jakarta Neon Run" class="rounded-2xl object-cover w-full h-full shadow-2xl shadow-red-500/20">
+                </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="text-4xl font-bold mb-2">More Than a <span class="accent-text">Race.</span></h2>
+                    <h3 class="text-2xl font-semibold text-gray-300 mb-4">Experience the Vibe. Join the Community.</h3>
+                    <p class="text-gray-400 mb-6">Kami menciptakan festival olahraga yang tak terlupakan. Bayangkan berlari di tengah lautan lampu neon, diiringi musik favoritmu, dan diakhiri dengan pesta komunitas. Ini adalah tempat di mana keringat, tawa, dan koneksi bertemu.</p>
+                     <a href="event.html" class="font-semibold text-orange-500 hover:text-orange-400 transition-colors">Energy Meets Aesthetic &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: The Platform -->
+    <section id="platform" class="py-20">
+        <div class="container mx-auto px-6 fade-in-section">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                     <h2 class="text-4xl font-bold mb-2">Your Digital <span class="accent-text">Playground.</span></h2>
+                    <h3 class="text-2xl font-semibold text-gray-300 mb-4">Connect, Compete, Conquer.</h3>
+                    <p class="text-gray-400 mb-6">Aplikasi GeZport adalah hub digitalmu. Gunakan fitur "Find My Squad" untuk bertemu teman olahraga baru, taklukkan "Virtual Challenges" untuk mendapatkan hadiah eksklusif, dan bagikan pencapaianmu. Semua dalam satu platform yang intuitif.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"><img src="https://placehold.co/150x50/000000/FFFFFF?text=App+Store" alt="App Store" class="h-12"></a>
+                        <a href="#"><img src="https://placehold.co/150x50/000000/FFFFFF?text=Google+Play" alt="Google Play" class="h-12"></a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="bg-gray-800 p-4 rounded-[40px] shadow-lg">
+                        <img src="https://placehold.co/300x600/1a1a1a/FFFFFF?text=GeZport+App+Mockup" alt="App Mockup" class="rounded-[32px]">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-8">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="hover:text-white transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="#" class="hover:text-white transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M22 4s-.7 2.1-2 3.4c1.6 1.4 3.3 4.9 3.3 8.7 0 1.9-1.1 3.6-2.6 4.7-1.1.8-2.5 1.3-4 1.3-1.1 0-2.2-.3-3.2-.8-1.3-.6-2.5-1.5-3.5-2.7-1.2-1.4-2.2-3.3-2.6-5.1-.4-1.8-.1-3.7.8-5.4s2.4-3.1 4.1-3.9c1.7-.8 3.6-1 5.4-.6 1.8.4 3.4 1.4 4.6 2.9v-1.4c0-2.3-1.6-4.1-3.6-4.1-2 0-3.6 1.8-3.6 4.1 0 1.5.8 2.8 2 3.5"></path><path d="m9 12.2 2.6-2.6"></path></svg>
+                </a>
+                <a href="#" class="hover:text-white transition-colors">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+                </a>
+            </div>
+            <p class="mb-2">Kontak kami: <a href="mailto:hello@gezport.id" class="text-orange-500 hover:underline">hello@gezport.id</a></p>
+            <p> PT GeZport Tbk &copy; 2025. All Rights Reserved. Level Up Your Game.</p>
+        </div> 
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Scroll animations
+        const sections = document.querySelectorAll('.fade-in-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

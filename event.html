@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakarta Neon Run by GeZport - The Night is Our Playground</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0c0c0c;
+            color: #E0E0E0;
+        }
+        .neon-text-pink {
+            text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 40px #ff007f;
+            color: #fff;
+        }
+        .neon-text-cyan {
+            text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff;
+            color: #fff;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("event.png");
+            background-size: cover;
+            background-position: center;
+        }
+        .btn-register {
+            background: #ff007f;
+            color: #fff;
+            box-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f;
+            transition: all 0.3s ease;
+        }
+        .btn-register:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #ff007f, 0 0 30px #ff007f;
+        }
+        .zone-card {
+            border: 2px solid transparent;
+            background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, linear-gradient(145deg, #ff007f, #00ffff) border-box;
+            transition: transform 0.3s ease;
+        }
+        .zone-card:hover {
+            transform: translateY(-10px);
+        }
+        .faq-item {
+            border-bottom: 1px solid #333;
+        }
+        .faq-question {
+            cursor: pointer;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex flex-col justify-center items-center text-center p-4">
+        <h2 class="text-xl md:text-2xl font-bold uppercase tracking-widest text-gray-300 reveal">GeZport Presents</h2>
+        <h1 class="text-5xl md:text-8xl font-black uppercase mt-4 reveal neon-text-pink" style="transition-delay: 200ms;">Energy Meets</h1>
+        <h1 class="text-5xl md:text-8xl font-black uppercase reveal neon-text-cyan" style="transition-delay: 400ms;">Aesthetic</h1>
+        <p class="max-w-2xl mt-6 text-lg md:text-xl text-gray-200 reveal" style="transition-delay: 600ms;">
+            Sabtu, 15 November 2025 | Plaza Tenggara, Gelora Bung Karno
+        </p>
+        <a href="#register" class="mt-8 btn-register font-bold py-4 px-12 rounded-full text-lg uppercase reveal" style="transition-delay: 800ms;">
+            Daftar Sekarang
+        </a>
+    </section>
+
+    <main>
+        <!-- About Section -->
+        <section class="py-20 md:py-24">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl md:text-5xl font-black reveal">Ini Bukan Sekadar Lari.</h2>
+                <h3 class="text-4xl md:text-5xl font-black reveal"><span class="neon-text-pink">Ini Adalah</span> <span class="neon-text-cyan">Festival.</span></h3>
+                <p class="max-w-3xl mx-auto mt-6 text-gray-400 text-lg leading-relaxed reveal">
+                    Lupakan catatan waktu personalmu. Jakarta Neon Run adalah lari santai 5K di malam hari yang penuh dengan cahaya, musik, dan energi. Ajak squad-mu dan bersiaplah untuk bersinar di bawah gemerlap lampu neon kota Jakarta.
+                </p>
+            </div>
+        </section>
+
+        <!-- Experience Zones Section -->
+        <section class="py-20 md:py-24 bg-[#1a1a1a]">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-black reveal">What to Expect: The Glow Zones</h2>
+                    <p class="max-w-2xl mx-auto mt-4 text-gray-400 reveal">Setiap kilometer adalah pengalaman baru. Lalui zona-zona interaktif yang akan membuat larimu tak terlupakan.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Zone 1 -->
+                    <div class="zone-card rounded-lg p-6 text-center reveal">
+                        <h3 class="text-2xl font-bold mb-3 neon-text-pink">Laser Forest</h3>
+                        <p class="text-gray-400">Berlari melewati hutan laser yang memukau, diiringi dengan musik elektronik yang membangkitkan semangat.</p>
+                    </div>
+                    <!-- Zone 2 -->
+                    <div class="zone-card rounded-lg p-6 text-center reveal" style="transition-delay: 150ms;">
+                        <h3 class="text-2xl font-bold mb-3 neon-text-cyan">Bubble Party</h3>
+                        <p class="text-gray-400">Terjang lautan busa yang menyala dalam gelap. Basah, seru, dan pastinya Instagrammable!</p>
+                    </div>
+                    <!-- Zone 3 -->
+                    <div class="zone-card rounded-lg p-6 text-center reveal" style="transition-delay: 300ms;">
+                        <h3 class="text-2xl font-bold mb-3 neon-text-pink">Graffiti Alley</h3>
+                        <p class="text-gray-400">Ekspresikan dirimu! Tinggalkan jejak cahayamu di dinding grafiti UV raksasa yang telah kami siapkan.</p>
+                    </div>
+                    <!-- Zone 4 -->
+                    <div class="zone-card rounded-lg p-6 text-center reveal" style="transition-delay: 450ms;">
+                        <h3 class="text-2xl font-bold mb-3 neon-text-cyan">Psychedelic Tunnel</h3>
+                        <p class="text-gray-400">Masuki terowongan dengan visual psikedelik yang akan membawamu ke dimensi lain sebelum garis finis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Finish Line Festival Section -->
+        <section class="py-20 md:py-24">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="reveal">
+                        <!--  -->
+                        <img src="https://placehold.co/600x450/111/FF007F?text=Finish+Line+Festival" alt="Finish Line Festival" class="rounded-lg shadow-2xl">
+                    </div>
+                    <div class="reveal">
+                        <h2 class="text-4xl md:text-5xl font-black leading-tight">Pesta Belum Berakhir di Garis Finis.</h2>
+                        <p class="text-gray-300 mt-6 text-lg leading-relaxed">Setelah menyelesaikan 5K, pestanya baru saja dimulai! Kamu akan disambut di <span class="font-bold neon-text-pink">Finish Line Festival</span>, sebuah perayaan akbar dengan:</p>
+                        <ul class="mt-4 space-y-2 list-disc list-inside text-gray-300">
+                            <li>Live performance dari DJ ternama Indonesia.</li>
+                            <li>Zona kuliner dengan berbagai food truck kekinian.</li>
+                            <li>Spot foto interaktif dan 360-degree camera.</li>
+                            <li>Area games dan aktivitas dari para sponsor.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What You Get (Race Kit) Section -->
+        <section class="py-20 md:py-24 bg-[#1a1a1a]">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl md:text-5xl font-black reveal">Your Survivor Kit</h2>
+                <p class="max-w-2xl mx-auto mt-4 text-gray-400 mb-12 reveal">Setiap pendaftaran mendapatkan race kit eksklusif untuk membantumu bersinar!</p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="reveal">
+                        <!--  -->
+                        <img src="https://placehold.co/600x400/111/00FFFF?text=Race+Kit+Items" alt="Race Kit Jakarta Neon Run" class="rounded-lg">
+                    </div>
+                    <div class="text-left space-y-4 reveal">
+                        <div class="flex items-center"><span class="text-2xl mr-4 neon-text-pink">✓</span><span class="text-lg">T-shirt Eksklusif Jakarta Neon Run 2025 (Dry-Fit)</span></div>
+                        <div class="flex items-center"><span class="text-2xl mr-4 neon-text-cyan">✓</span><span class="text-lg">Nomor BIB dengan timing chip</span></div>
+                        <div class="flex items-center"><span class="text-2xl mr-4 neon-text-pink">✓</span><span class="text-lg">Medali Finisher Unik (Glow in the dark!)</span></div>
+                        <div class="flex items-center"><span class="text-2xl mr-4 neon-text-cyan">✓</span><span class="text-lg">Glowsticks & aksesoris neon</span></div>
+                        <div class="flex items-center"><span class="text-2xl mr-4 neon-text-pink">✓</span><span class="text-lg">Goodie bag dari sponsor</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-20 md:py-24">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <h2 class="text-4xl md:text-5xl font-black text-center mb-12 reveal">Frequently Asked Questions</h2>
+                <div id="faq-container" class="space-y-4 reveal">
+                    <div class="faq-item">
+                        <div class="faq-question flex justify-between items-center p-4">
+                            <h3 class="text-xl font-semibold">Siapa saja yang bisa ikut?</h3>
+                            <span class="transform transition-transform duration-300">▼</span>
+                        </div>
+                        <div class="faq-answer px-4 pb-4 text-gray-400">
+                            Acara ini terbuka untuk semua orang! Tidak ada batasan usia, namun peserta di bawah 12 tahun harus didampingi oleh orang dewasa yang juga terdaftar.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question flex justify-between items-center p-4">
+                            <h3 class="text-xl font-semibold">Apakah larinya dihitung waktunya?</h3>
+                            <span class="transform transition-transform duration-300">▼</span>
+                        </div>
+                        <div class="faq-answer px-4 pb-4 text-gray-400">
+                            Ya, setiap BIB dilengkapi timing chip untuk catatan waktu personalmu. Tapi ingat, fokus acara ini adalah bersenang-senang, bukan kecepatan!
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question flex justify-between items-center p-4">
+                            <h3 class="text-xl font-semibold">Apa yang harus saya kenakan?</h3>
+                            <span class="transform transition-transform duration-300">▼</span>
+                        </div>
+                        <div class="faq-answer px-4 pb-4 text-gray-400">
+                            Kenakan t-shirt event yang kami sediakan dan pakaian lari yang nyaman. Semakin terang dan kreatif pakaianmu, semakin baik! Pakaian putih atau warna neon akan menyala terang di bawah lampu UV.
+                        </div>
+                    </div>
+                     <div class="faq-item">
+                        <div class="faq-question flex justify-between items-center p-4">
+                            <h3 class="text-xl font-semibold">Apakah ada tempat penitipan barang?</h3>
+                            <span class="transform transition-transform duration-300">▼</span>
+                        </div>
+                        <div class="faq-answer px-4 pb-4 text-gray-400">
+                            Tentu! Kami menyediakan area penitipan barang (baggage drop) gratis bagi semua peserta. Namun, kami sarankan untuk tidak membawa barang berharga.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / Register Section -->
+        <section id="register" class="py-20 md:py-32 bg-cover bg-center" style="background-image: linear-gradient(rgba(12, 12, 12, 0.9), rgba(12, 12, 12, 0.9)), url('https://placehold.co/1920x1080/000000/00FFFF?text=Register')">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl md:text-5xl font-black uppercase neon-text-pink reveal">Jangan Lewatkan</h2>
+                <h3 class="text-4xl md:text-5xl font-black uppercase neon-text-cyan reveal">Malam Paling Bersinar Tahun Ini</h3>
+                <p class="max-w-xl mx-auto mt-6 text-gray-300 mb-8 reveal">Slot terbatas dan akan habis dengan cepat. Amankan tempatmu dan squad-mu sekarang juga!</p>
+                <div class="reveal">
+                    <div class="text-3xl font-bold text-white mb-2">Harga Early Bird: Rp 350.000</div>
+                    <p class="text-gray-400 mb-8">(Berakhir dalam 12 hari)</p>
+                    <a href="#" class="btn-register font-bold py-4 px-12 rounded-full text-lg uppercase">
+                        Daftar Sekarang
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // FAQ Accordion
+            const faqContainer = document.getElementById('faq-container');
+            if (faqContainer) {
+                faqContainer.addEventListener('click', (e) => {
+                    const question = e.target.closest('.faq-question');
+                    if (question) {
+                        const answer = question.nextElementSibling;
+                        const icon = question.querySelector('span');
+
+                        // Tutup semua jawaban lain
+                        document.querySelectorAll('.faq-answer').forEach(ans => {
+                            if (ans !== answer) {
+                                ans.style.maxHeight = null;
+                                ans.previousElementSibling.querySelector('span').style.transform = 'rotate(0deg)';
+                            }
+                        });
+                        
+                        // Buka/Tutup jawaban yang diklik
+                        if (answer.style.maxHeight) {
+                            answer.style.maxHeight = null;
+                            icon.style.transform = 'rotate(0deg)';
+                        } else {
+                            answer.style.maxHeight = answer.scrollHeight + "px";
+                            icon.style.transform = 'rotate(180deg)';
+                        }
+                    }
+                });
+            }
+
+            // Scroll Reveal Animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            const elementsToReveal = document.querySelectorAll('.reveal');
+            elementsToReveal.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+</body>
+</html>
+

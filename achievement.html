@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestasi Kami - Pencapaian GeZport</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #E0E0E0;
+        }
+        .logo {
+            height: 50px;
+        }
+        .brand-text-gradient {
+            background: -webkit-linear-gradient(45deg, #FF5722, #FFC107);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 1)), url('https://placehold.co/1920x1080/1a1a1a/orange?text=ACHIEVEMENT');
+            background-size: cover;
+            background-position: center;
+        }
+        .counter-box {
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+        .counter-box:hover {
+            border-color: #FF5722;
+            transform: translateY(-5px);
+        }
+        .award-card {
+            background-color: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            transition: all 0.3s ease;
+        }
+        .award-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            border-color: #444;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+    <!-- Header -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html">
+                <img src="1759596149630-removebg-preview.png" class="logo">
+            </a>
+            <a href="careers.html" class="border border-orange-500 text-orange-500 font-bold py-2 px-4 rounded-lg hover:bg-orange-500 hover:text-white transition-colors">Gabung Dengan Kami</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-center py-24 md:py-40 px-4">
+        <h1 class="text-4xl md:text-7xl font-black uppercase reveal">Breaking Records.</h1>
+        <h2 class="text-4xl md:text-7xl font-black uppercase brand-text-gradient mt-2 reveal" style="transition-delay: 200ms;">Building a Movement.</h2>
+        <p class="max-w-3xl mx-auto mt-6 text-lg text-gray-300 reveal" style="transition-delay: 400ms;">
+            Setiap angka adalah cerita. Setiap penghargaan adalah bukti semangat komunitas. Lihat bagaimana kita bersama-sama mengubah permainan.
+        </p>
+    </section>
+
+    <!-- Key Metrics Section -->
+    <section class="py-20 md:py-24 bg-[#1a1a1a]">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Metric 1 -->
+                <div class="counter-box bg-gray-900 p-8 rounded-xl text-center reveal">
+                    <div class="text-5xl md:text-6xl font-black brand-text-gradient mb-2" data-target="100000">0</div>
+                    <p class="text-lg font-semibold text-gray-300">Pengguna Aplikasi</p>
+                    <p class="text-gray-500 text-sm mt-1">Bergabung dalam ekosistem digital kami.</p>
+                </div>
+                <!-- Metric 2 -->
+                <div class="counter-box bg-gray-900 p-8 rounded-xl text-center reveal" style="transition-delay: 150ms;">
+                    <div class="text-5xl md:text-6xl font-black brand-text-gradient mb-2" data-target="25000">0</div>
+                    <p class="text-lg font-semibold text-gray-300">Partisipan Event</p>
+                    <p class="text-gray-500 text-sm mt-1">Merasakan langsung vibe GeZport.</p>
+                </div>
+                <!-- Metric 3 -->
+                <div class="counter-box bg-gray-900 p-8 rounded-xl text-center reveal" style="transition-delay: 300ms;">
+                    <div class="text-5xl md:text-6xl font-black brand-text-gradient mb-2" data-target="500000">0</div>
+                    <p class="text-lg font-semibold text-gray-300">Botol Plastik Didaur Ulang</p>
+                    <p class="text-gray-500 text-sm mt-1">Diubah menjadi produk performa tinggi.</p>
+                </div>
+                <!-- Metric 4 -->
+                <div class="counter-box bg-gray-900 p-8 rounded-xl text-center reveal" style="transition-delay: 450ms;">
+                    <div class="text-5xl md:text-6xl font-black brand-text-gradient mb-2" data-target="50">0</div>
+                    <p class="text-lg font-semibold text-gray-300">Komunitas Terbentuk</p>
+                    <p class="text-gray-500 text-sm mt-1">Di berbagai kota di Indonesia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Recognition Section -->
+    <section class="py-20 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black reveal">Diakui Oleh Industri</h2>
+                <p class="max-w-2xl mx-auto mt-4 text-gray-400 reveal" style="transition-delay: 150ms;">Kami bangga inovasi dan dampak yang kami ciptakan mendapatkan apresiasi. Ini adalah kemenangan untuk seluruh tim dan komunitas GeZport.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Award 1 -->
+                <div class="award-card rounded-lg p-8 flex flex-col items-center text-center reveal">
+                    
+                    <img src="https://placehold.co/100x100/333/orange?text=TSW" class="h-24 w-24 mb-6" alt="Tech Startup Weekly Logo">
+                    <h3 class="text-xl font-bold text-white mb-2">Most Innovative App 2025</h3>
+                    <p class="font-semibold text-gray-400 mb-4">Tech Startup Weekly</p>
+                    <p class="text-gray-500">Diberikan untuk Aplikasi GeZport yang berhasil mengintegrasikan komunitas, tantangan virtual, dan pengalaman sosial secara seamless.</p>
+                </div>
+                <!-- Award 2 -->
+                <div class="award-card rounded-lg p-8 flex flex-col items-center text-center reveal" style="transition-delay: 200ms;">
+                    
+                    <img src="https://placehold.co/100x100/333/orange?text=IUSC" class="h-24 w-24 mb-6" alt="Indonesia Urban Sports Council Logo">
+                    <h3 class="text-xl font-bold text-white mb-2">Community Impact Award 2025</h3>
+                    <p class="font-semibold text-gray-400 mb-4">Indonesia Urban Sports Council</p>
+                    <p class="text-gray-500">Mengapresiasi kesuksesan "Jakarta Neon Run" dalam mempromosikan gaya hidup aktif dan menciptakan ruang positif bagi anak muda.</p>
+                </div>
+                <!-- Award 3 -->
+                <div class="award-card rounded-lg p-8 flex flex-col items-center text-center reveal" style="transition-delay: 400ms;">
+                    
+                    <img src="https://placehold.co/100x100/333/orange?text=SBF" class="h-24 w-24 mb-6" alt="Sustainable Business Forum Logo">
+                    <h3 class="text-xl font-bold text-white mb-2">Green Product of the Year 2024</h3>
+                    <p class="font-semibold text-gray-400 mb-4">Sustainable Business Forum</p>
+                    <p class="text-gray-500">Untuk sepatu "Re-Form 1" yang menjadi standar baru dalam industri apparel olahraga berkelanjutan di Indonesia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Testimonials Section -->
+    <section class="py-20 md:py-24 bg-[#1a1a1a]">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black reveal">Suara Komunitas Kami</h2>
+                 <p class="max-w-2xl mx-auto mt-4 text-gray-400 reveal" style="transition-delay: 150ms;">Karena pada akhirnya, pencapaian terbesar kami adalah senyum dan semangat dari mereka yang kami layani.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-800 p-8 rounded-lg reveal">
+                    <p class="text-gray-300 italic mb-6">"GeZport bukan cuma brand, tapi rumah. Lewat aplikasinya, aku nemu teman lari baru dan jadi lebih termotivasi. Event-eventnya selalu pecah!"</p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/50x50/555/FFF?text=A" class="w-12 h-12 rounded-full mr-4" alt="User photo">
+                        <div>
+                            <p class="font-bold text-white">Andini Putri</p>
+                            <p class="text-sm text-gray-400">Pengguna Aplikasi & Peserta Neon Run</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Testimonial 2 -->
+                <div class="bg-gray-800 p-8 rounded-lg reveal" style="transition-delay: 200ms;">
+                    <p class="text-gray-300 italic mb-6">"Sebagai brand partner, kami melihat langsung bagaimana GeZport terkoneksi kuat dengan Gen Z. Kolaborasi kami di Jakarta Neon Run sangat sukses dan berdampak."</p>
+                    <div class="flex items-center">
+                         <img src="https://placehold.co/50x50/555/FFF?text=B" class="w-12 h-12 rounded-full mr-4" alt="Partner photo">
+                        <div>
+                            <p class="font-bold text-white">Budi Santoso</p>
+                            <p class="text-sm text-gray-400">Marketing Manager, Hydrate Drinks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-black reveal">Siap Mencetak Prestasi Baru Bersama Kami?</h2>
+            <p class="max-w-2xl mx-auto mt-4 text-gray-300 mb-8 reveal" style="transition-delay: 150ms;">Pencapaian ini hanyalah awal. Kami mencari talenta-talenta penuh semangat yang ingin menjadi bagian dari sejarah dan membantu kami meraih level berikutnya.</p>
+            <button class="bg-orange-600 text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-orange-700 transform hover:scale-105 transition-all duration-300 reveal" style="transition-delay: 300ms;">
+                Lihat Semua Lowongan
+            </button>
+        </div>
+    </section>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Scroll Reveal Animations ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Jika elemen adalah counter, mulai animasi
+                    const counter = entry.target.querySelector('[data-target]');
+                    if (counter) {
+                        animateCounter(counter);
+                    }
+                }
+            });
+        }, {
+            threshold: 0.2 // Trigger saat 20% terlihat
+        });
+
+        const elementsToReveal = document.querySelectorAll('.reveal');
+        elementsToReveal.forEach(el => {
+            observer.observe(el);
+        });
+
+        // --- Counter Animation ---
+        function animateCounter(counter) {
+            const target = +counter.getAttribute('data-target');
+            const duration = 2000; // 2 detik
+            const stepTime = Math.abs(Math.floor(duration / target));
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += Math.ceil(target / (duration / 10)); // increment value
+                if (current > target) {
+                    current = target;
+                }
+                counter.innerText = current.toLocaleString('id-ID'); // Format dengan separator ribuan
+                if (current === target) {
+                    clearInterval(timer);
+                }
+            }, 10);
+             // Unobserve setelah animasi selesai agar tidak berulang
+            observer.unobserve(counter.parentElement);
+        }
+    });
+    </script>
+</body>
+</html>

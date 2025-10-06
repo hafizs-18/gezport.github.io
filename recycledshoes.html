@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeZport - The Re-Form 1 | Sepatu dari Sampah Daur Ulang</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #E0E0E0;
+        }
+        .logo {
+            height: 50px;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 1)), url('sepatu1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .accent-text {
+            color: #FF5722; /* Vibrant Orange */
+        }
+        .brand-text-gradient {
+            background: -webkit-linear-gradient(45deg, #FF5722, #FFC107);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Interactivity for Exploded View */
+        .shoe-part {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            cursor: pointer;
+            opacity: 0.8;
+        }
+        .shoe-part:hover {
+            transform: scale(1.05);
+            opacity: 1;
+            filter: drop-shadow(0 0 15px #FF5722);
+        }
+        .info-box {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        /* Scroll Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Custom timeline line */
+        .timeline-item:not(:last-child)::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 40px;
+            width: 2px;
+            height: 100%;
+            background-color: #444;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- 1. Hero Section -->
+    <header class="hero-bg min-h-screen flex flex-col justify-center items-center text-center p-4">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html">
+                <img src="1759596149630-removebg-preview.png" class="logo">
+            </a>
+        </nav>
+        <h1 class="text-5xl md:text-8xl font-black uppercase reveal">Lari Lebih Jauh.</h1>
+        <h2 class="text-5xl md:text-8xl font-black uppercase brand-text-gradient reveal" style="transition-delay: 200ms;">Jejak Lebih Ringan.</h2>
+        <p class="max-w-2xl mt-6 text-lg md:text-xl text-gray-300 reveal" style="transition-delay: 400ms;">
+            Memperkenalkan <span class="font-bold text-white">GeZport Re-Form 1</span>. Sepatu lari performa tinggi pertama kami yang sepenuhnya dibuat dari sampah daur ulang. Inovasi untuk kakimu, revolusi untuk planet ini.
+        </p>
+        <a href="#anatomy" class="mt-8 bg-orange-600 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-orange-700 transform hover:scale-105 transition-all duration-300 reveal" style="transition-delay: 600ms;">
+            Lihat Anatominya
+        </a>
+    </header>
+
+    <main>
+        <!-- 2. "What If..." Section -->
+        <section class="py-20 bg-[#1a1a1a] text-center">
+            <div class="container mx-auto px-4">
+                <p class="text-2xl md:text-4xl font-bold reveal">Bagaimana jika...</p>
+                <p class="text-2xl md:text-4xl mt-2 reveal" style="transition-delay: 150ms;">...sebotol plastik bekas yang kamu buang...</p>
+                <p class="text-3xl md:text-5xl font-black brand-text-gradient mt-4 reveal" style="transition-delay: 300ms;">...bisa membawamu berlari lebih kencang?</p>
+            </div>
+        </section>
+
+        <!-- 3. Exploded View / Anatomy Section -->
+        <section id="anatomy" class="py-20 md:py-32">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-6xl font-black reveal">Dibuat dari <span class="accent-text">Sampah.</span></h2>
+                    <h2 class="text-4xl md:text-6xl font-black reveal" style="transition-delay: 150ms;">Didesain untuk <span class="accent-text">Performa.</span></h2>
+                    <p class="max-w-3xl mx-auto mt-4 text-gray-400 reveal" style="transition-delay: 300ms;">Setiap bagian dari Re-Form 1 direkayasa dari material daur ulang tanpa mengorbankan kenyamanan, daya tahan, dan gayamu. Arahkan kursor ke setiap bagian untuk melihatnya.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                    <!-- Left Info -->
+                    <div class="space-y-6 text-right">
+                        <div id="info-upper" class="info-box opacity-20 transform -translate-x-4">
+                            <h3 class="text-2xl font-bold">G-Fiber Knit Upper</h3>
+                            <p class="text-gray-400">Bagian atas yang ringan dan breathable, ditenun dari serat poliester hasil daur ulang 5 botol plastik.</p>
+                        </div>
+                        <div id="info-laces" class="info-box opacity-20 transform -translate-x-4">
+                            <h3 class="text-2xl font-bold">Eco-Laces</h3>
+                            <p class="text-gray-400">Tali sepatu kuat yang 100% dibuat dari botol plastik PET daur ulang.</p>
+                        </div>
+                    </div>
+
+                    <!-- Center Image -->
+                    <div class="relative">
+                        <!--  -->
+                        <svg id="shoe-svg" viewBox="0 0 500 300" class="w-full h-auto">
+                            <!-- Outsole -->
+                            <path class="shoe-part" data-target="outsole" fill="#4A4A4A" d="M20,280 C60,310 250,320 480,270 L470,230 C300,280 100,270 30,240 Z" />
+                            <!-- Midsole -->
+                            <path class="shoe-part" data-target="midsole" fill="#6E6E6E" d="M30,240 C100,270 300,280 470,230 L460,180 C280,240 120,230 40,200 Z" />
+                            <!-- Upper -->
+                            <path class="shoe-part" data-target="upper" fill="#BDBDBD" d="M40,200 C20,180 50,80 150,80 C250,80 280,120 380,120 C450,120 480,150 460,180 H40 Z" />
+                            <!-- Laces -->
+                            <path class="shoe-part" data-target="laces" fill="#FF5722" d="M200,100 L220,120 L240,100 L260,120 L280,100 L270,90 L250,110 L230,90 L210,110 L190,90 Z" />
+                            <!-- Lining -->
+                             <path class="shoe-part" data-target="lining" fill="#9E9E9E" d="M380,120 C370,110 350,115 340,125 L350,140 C370,130 380,125 380,120" />
+                        </svg>
+                    </div>
+
+                    <!-- Right Info -->
+                    <div class="space-y-6 text-left">
+                        <div id="info-lining" class="info-box opacity-20 transform translate-x-4">
+                            <h3 class="text-2xl font-bold">ComfyFoam Lining</h3>
+                            <p class="text-gray-400">Lapisan dalam yang lembut, dibuat dari busa sisa produksi pabrik.</p>
+                        </div>
+                        <div id="info-midsole" class="info-box opacity-20 transform translate-x-4">
+                            <h3 class="text-2xl font-bold">Re-Bounce Midsole</h3>
+                            <p class="text-gray-400">Bantalan responsif yang terbuat dari campuran karet daur ulang dan alga.</p>
+                        </div>
+                         <div id="info-outsole" class="info-box opacity-20 transform translate-x-4">
+                            <h3 class="text-2xl font-bold">GripTire Outsole</h3>
+                            <p class="text-gray-400">Sol luar dengan daya cengkeram tinggi, dibuat dari serpihan ban bekas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. The Process Section -->
+        <section class="py-20 md:py-32 bg-[#1a1a1a]">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-6xl font-black reveal">Dari <span class="accent-text">Botol Bekas</span> Menjadi <span class="accent-text">Sepatu Kerenmu.</span></h2>
+                    <p class="max-w-3xl mx-auto mt-4 text-gray-400 reveal" style="transition-delay: 150ms;">Kami mengubah sampah menjadi sesuatu yang bernilai. Ini bukan sihir, ini adalah sains dan komitmen kami untuk masa depan yang lebih baik.</p>
+                </div>
+                <div class="relative max-w-2xl mx-auto">
+                    <!-- Timeline Items -->
+                    <div class="timeline-item relative pl-12 pb-12 reveal">
+                        <div class="absolute left-0 top-0 w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center font-bold text-xl">1</div>
+                        <h3 class="text-2xl font-bold mb-2">Pengumpulan & Pembersihan</h3>
+                        <p class="text-gray-400">Botol plastik bekas dikumpulkan dari komunitas pesisir, kemudian dicuci bersih untuk menghilangkan kotoran dan label.</p>
+                    </div>
+                    <div class="timeline-item relative pl-12 pb-12 reveal">
+                         <div class="absolute left-0 top-0 w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center font-bold text-xl">2</div>
+                        <h3 class="text-2xl font-bold mb-2">Pencacahan</h3>
+                        <p class="text-gray-400">Botol-botol tersebut dicacah menjadi serpihan-serpihan kecil, memisahkannya berdasarkan warna.</p>
+                    </div>
+                    <div class="timeline-item relative pl-12 pb-12 reveal">
+                         <div class="absolute left-0 top-0 w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center font-bold text-xl">3</div>
+                        <h3 class="text-2xl font-bold mb-2">Peleburan & Ekstrusi</h3>
+                        <p class="text-gray-400">Serpihan plastik dilelehkan dan diekstrusi menjadi benang filamen tipis, seperti membuat spageti.</p>
+                    </div>
+                    <div class="timeline-item relative pl-12 reveal">
+                         <div class="absolute left-0 top-0 w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center font-bold text-xl">4</div>
+                        <h3 class="text-2xl font-bold mb-2">Ditenun Menjadi G-Fiber</h3>
+                        <p class="text-gray-400">Benang-benang tersebut kemudian ditenun menjadi kain G-Fiber Knit yang kuat namun fleksibel, siap untuk dibentuk menjadi bagian atas sepatu Re-Form 1.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Lifestyle/Gallery Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-center text-4xl md:text-6xl font-black mb-12 reveal">Style Meets <span class="brand-text-gradient">Sustainability.</span></h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="grid gap-4">
+                        <div class="reveal"><img class="h-auto max-w-full rounded-lg" src="sepatu1.jpg" alt=""></div>
+                        <div class="reveal"><img class="h-auto max-w-full rounded-lg" src="sepatu/all.jpg" alt=""></div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div class="reveal"><img class="h-auto max-w-full rounded-lg" src="sepatu/pasworkout.jpg" alt=""></div>
+                        <div class="reveal"><img class="h-auto max-w-full rounded-lg" src="sepatu/streetstyle.jpg" alt=""></div>
+                    </div>
+                     <div class="grid gap-4">
+                        <div class="reveal"><img class="h-auto max-w-full rounded-lg" src="sepatu/details.jpg" alt=""></div>
+                        <div class="reveal"><img class="h-auto max-w-full rounded-lg" src="sepatu/comunity.png" alt=""></div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div class="reveal"><img class="h-auto max-w-full rounded-lg" src="sepatu/action.jpg" alt=""></div>
+                        <div class="reveal"><img class="h-auto max-w-full rounded-lg" src="sepatu/relax.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 6. Call to Action -->
+        <section class="py-20 md:py-32 bg-[#1a1a1a]">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl md:text-6xl font-black reveal">Jadilah Bagian dari <span class="accent-text">Perubahan.</span></h2>
+                <p class="max-w-2xl mx-auto mt-4 text-gray-300 mb-8 reveal" style="transition-delay: 150ms;">Setiap langkah dengan Re-Form 1 adalah suara untuk planet yang lebih sehat. Pilih performa, pilih keberlanjutan. Pilih untuk membuat perbedaan.</p>
+                <button class="bg-white text-black font-bold py-4 px-10 rounded-full text-lg hover:bg-gray-200 transform hover:scale-105 transition-all duration-300 reveal" style="transition-delay: 300ms;">
+                    Beli Koleksi Re-Form 1
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Interactivity for Exploded Shoe View ---
+        const shoeParts = document.querySelectorAll('.shoe-part');
+        const infoBoxes = document.querySelectorAll('.info-box');
+
+        const resetInfoBoxes = () => {
+            infoBoxes.forEach(box => {
+                box.classList.add('opacity-20');
+                if(box.id.startsWith('info-')){
+                    if(box.closest('.text-right')) box.classList.add('transform','-translate-x-4');
+                    else box.classList.add('transform','translate-x-4');
+                }
+            });
+        };
+
+        shoeParts.forEach(part => {
+            part.addEventListener('mouseover', () => {
+                resetInfoBoxes();
+                const targetId = `info-${part.dataset.target}`;
+                const targetBox = document.getElementById(targetId);
+                if (targetBox) {
+                    targetBox.classList.remove('opacity-20', '-translate-x-4', 'translate-x-4');
+                }
+            });
+
+            part.addEventListener('mouseout', resetInfoBoxes);
+        });
+        
+        // Initial state
+        resetInfoBoxes();
+
+
+        // --- Scroll Reveal Animations ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        });
+
+        const elementsToReveal = document.querySelectorAll('.reveal');
+        elementsToReveal.forEach(el => {
+            observer.observe(el);
+        });
+
+    });
+    </script>
+</body>
+</html>
